@@ -1,5 +1,5 @@
 on: push
-name: Test, Build and Release apk
+name: On push Create Flutter Application
 jobs:
   build:
     name: Build APK
