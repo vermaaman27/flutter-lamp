@@ -43,8 +43,11 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            //Expanded is used to divide the screen into different Sections ...
+
             Expanded(
-                flex: 6,
+                flex:
+                    6, //This is the number of divisions it can had there are 6 sections for this Expanded Widget
                 child: Container(
                     color: Colors.black,
                     child: Padding(
@@ -127,6 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                       splashRadius: 1,
                                       onPressed: () {
                                         print("facebook");
+                                        print("Hello");
                                       }),
                                   Text("Facebook",
                                       style: TextStyle(fontSize: 20))
@@ -159,20 +163,28 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ))),
             Expanded(
-                flex: 14,
-                child: Container(
-                  color: Colors.black,
-                  child: Padding(
-                    padding: EdgeInsets.all(1.0),
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(
-                        Radius.circular(40),
-                      )),
-                      color: Colors.white,
+              flex: 14,
+              child: Container(
+                color: Colors.black,
+                child: Padding(
+                  padding: EdgeInsets.all(1.0),
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(
+                      Radius.circular(40),
+                    )),
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Text(
+                        "I love Shriya",
+                        style: TextStyle(color: Colors.pink, fontSize: 40),
+                      ),
                     ),
+                    color: Colors.white,
                   ),
-                ))
+                ),
+              ),
+            ),
           ],
         ),
       ),
